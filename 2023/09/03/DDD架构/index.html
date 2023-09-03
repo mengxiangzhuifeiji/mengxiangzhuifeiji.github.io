@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.8.0">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://example.com/categories/设计模式/"/>
+  
+  <link rel="canonical" href="http://example.com/2023/09/03/ddd架构/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,17 +34,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>分类：设计模式 - 天天</title>
+  <title>DDD - 天天</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="blog - Luhumu - 天天">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="天天">
-<meta property="og:url" content="http://example.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DDD">
+<meta property="og:url" content="http://example.com/2023/09/03/DDD%E6%9E%B6%E6%9E%84/index.html">
 <meta property="og:site_name" content="天天">
-<meta property="og:description" content="blog">
+<meta property="og:description" content="ddd - domain-driven design 我们先来分析一下软件架构模式演进的三个阶段。第一阶段是单机架构： 采用面向过程的设计方法，系统包括客户端 UI 层和数据库两层，采用 C&#x2F;S 架构模式，整个系统围绕数据库驱动设计和开发，并且总是从设计数据库和字段开始。第二阶段是集中式架构： 采用面向对象的设计方法，系统包括业务接入层、业务逻辑层和数据库层，采用经典的三层架构，也有部分">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2023-09-03T07:15:47.134Z">
+<meta property="article:modified_time" content="2023-09-03T07:16:26.731Z">
 <meta property="article:author" content="Luhumu">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2261,7 +2263,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper  search' style="display: none;">
+      <div id="none" class='cover-wrapper post search' style="display: none;">
         
   <div class='cover-bg lazyload placeholder' data-bg="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg"></div>
 
@@ -2324,25 +2326,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-
 <div id="l_main" class=''>
-  
-    
-      
-  <section class="post-list">
-    
-      
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/07/31/设计模式/">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/09/03/DDD架构/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="天天">
   </span>
@@ -2351,72 +2337,271 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="blog">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/07/31/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"  itemprop="url">
-        设计模式
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      
-        前言关于设计模式
+    
+      <h1 class="title" itemprop="name headline">
+        DDD
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">请设置文章作者</p>
+  </a>
+</div>
 
-独立于语言，是一门单独的知识，
-接口（interface）和API（项目对外提供 供外部访问的接口）
-在代码中加入设计模式 可以提高代码的健壮性 可读性等等提高 
-并不是所有的地方使用设计模式都适合 要根据项目的不同来选择用不用设计模式 用哪个 而不是滥用
-在java很多处都用了设计模式 java.util.Iterator(使用了迭代器模式) spring创建对象的方法...
-      
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E6%9E%B6%E6%9E%84%E6%A8%A1%E5%BC%8F/">架构模式</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E6%9E%B6%E6%9E%84%E6%A8%A1%E5%BC%8F/" itemprop="url"><span itemprop="name">架构模式</span></a>
+      </span>
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-07-31T17:31:50+08:00">2023-07-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" itemprop="url"><span itemprop="name">设计模式</span></a>
-            </span>
+
+
           
         
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-09-03T15:15:47+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2023年9月3日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
       </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <p>ddd - domain-driven design</p>
+<p>我们先来分析一下软件架构模式演进的三个阶段。<br><strong>第一阶段是单机架构：</strong> 采用面向过程的设计方法，系统包括客户端 UI 层和数据库两层，采用 C&#x2F;S 架构模式，整个系统围绕数据库驱动设计和开发，并且总是从设计数据库和字段开始。<br><strong>第二阶段是集中式架构：</strong> 采用面向对象的设计方法，系统包括业务接入层、业务逻辑层和数据库层，采用经典的三层架构，也有部分应用采用传统的 SOA 架构。这种架构容易使系统变得臃肿，可扩展性和弹性伸缩性差。<br><strong>第三阶段是分布式微服务架构：</strong> 随着微服务架构理念的提出，集中式架构正向分布式微服务架构演进。微服务架构可以很好地实现应用之间的解耦，<strong>解决单体应用扩展性和弹性伸缩能力不足的问题</strong> 。<br>我们知道，在单机和集中式架构时代，系统分析、设计和开发往往是独立、分阶段割裂进行的。<br>比如，在系统建设过程中，我们经常会看到这样的情形：A 负责提出需求，B 负责需求分析，C 负责系统设计，D 负责代码实现，<strong>这样的流程很长，经手的人也很多，很容易导致信息丢失</strong> 。最后，就很容易导致需求、设计与代码实现的不一致，往往到了软件上线后，我们才发现很多功能并不是自己想要的，或者做出来的功能跟自己提出的需求偏差太大。<br><strong>而且在单机和集中式架构这两种模式下，软件无法快速响应需求和业务的迅速变化</strong> ，最终错失发展良机。此时，分布式微服务的出现就有点恰逢其时的意思了。</p>
+<p>2004 年埃里克·埃文斯（Eric Evans）发表了《领域驱动设计》（Domain-Driven Design –Tackling Complexity in the Heart of Software）这本书，从此领域驱动设计（Domain Driven Design，简称 DDD）诞生。DDD 核心思想是通过领域驱动设计方法定义领域模型，从而确定业务和应用边界，保证业务模型与代码模型的一致性。<br>但 DDD 提出后在软件开发领域一直都是雷声大，雨点小！直到 Martin Fowler 提出微服务架构，DDD 才真正迎来了自己的时代。<br>有些熟悉 DDD 设计方法的软件工程师在进行微服务设计时，发现可以利用 DDD 设计方法来建立领域模型，划分领域边界，再根据这些领域边界从业务视角来划分微服务边界。而按照 DDD 方法设计出的微服务的业务和应用边界都非常合理，可以很好地实现微服务内部和外部的「高内聚、低耦合」。于是越来越多的人开始把 DDD 作为微服务设计的指导思想。</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2023/webp/33777315/1690187054606-1aaf719a-2234-4474-b021-28a9098254c6.webp#averageHue=%23d6d687&clientId=u18f4f760-94b9-4&from=paste&id=u62d85869&originHeight=564&originWidth=720&originalType=url&ratio=1.25&rotation=0&showTitle=false&status=done&style=none&taskId=u39d6014d-5971-4ce5-85da-2dc7e1ce21c&title=" class="lazyload" data-srcset="https://cdn.nlark.com/yuque/0/2023/webp/33777315/1690187054606-1aaf719a-2234-4474-b021-28a9098254c6.webp#averageHue=%23d6d687&clientId=u18f4f760-94b9-4&from=paste&id=u62d85869&originHeight=564&originWidth=720&originalType=url&ratio=1.25&rotation=0&showTitle=false&status=done&style=none&taskId=u39d6014d-5971-4ce5-85da-2dc7e1ce21c&title=" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2023/png/33777315/1690188982964-062d56f3-6b45-406b-a1c4-5e52e193caa1.png#averageHue=%23e1d1c4&clientId=u18f4f760-94b9-4&from=paste&id=u7e9bfca3&originHeight=872&originWidth=964&originalType=url&ratio=1.25&rotation=0&showTitle=false&status=done&style=none&taskId=u2620850f-905b-4a08-b5c9-1244042973a&title=" class="lazyload" data-srcset="https://cdn.nlark.com/yuque/0/2023/png/33777315/1690188982964-062d56f3-6b45-406b-a1c4-5e52e193caa1.png#averageHue=%23e1d1c4&clientId=u18f4f760-94b9-4&from=paste&id=u7e9bfca3&originHeight=872&originWidth=964&originalType=url&ratio=1.25&rotation=0&showTitle=false&status=done&style=none&taskId=u2620850f-905b-4a08-b5c9-1244042973a&title=" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2023/jpeg/33777315/1690188454851-994ab243-4d95-4b30-9613-f0643e23a0d6.jpeg#averageHue=%23e6d9cb&clientId=u18f4f760-94b9-4&from=paste&id=udcad7415&originHeight=1268&originWidth=1700&originalType=url&ratio=1.25&rotation=0&showTitle=false&status=done&style=none&taskId=ucb966aa6-784c-4cd7-bf95-e72d5adfd62&title=" class="lazyload" data-srcset="https://cdn.nlark.com/yuque/0/2023/jpeg/33777315/1690188454851-994ab243-4d95-4b30-9613-f0643e23a0d6.jpeg#averageHue=%23e6d9cb&clientId=u18f4f760-94b9-4&from=paste&id=udcad7415&originHeight=1268&originWidth=1700&originalType=url&ratio=1.25&rotation=0&showTitle=false&status=done&style=none&taskId=ucb966aa6-784c-4cd7-bf95-e72d5adfd62&title=" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>至此，算了基本入门了DDD架构，扩展性也得到了一定的提升。不过随着业务的发展，不断冒出新的问题：</p>
+<ul>
+<li>一段业务逻辑代码，到底应该放到应用层还是领域层？</li>
+<li>领域服务当成原来的MVC中的service层，随着业务不断发展，类也在不断膨胀，好像还是老样子啊？</li>
+<li>聚合包含多个实体类，这个接口用不到这么多实体，为了性能还是直接写个SQL返回必要的操作吧，不过这样貌似又回到了MVC模式</li>
+<li>既然实体类可以包含业务逻辑、领域服务也可以放业务逻辑，那到底放哪里？</li>
+<li>资料上说领域层不能有外部依赖，要做到100%单测覆盖，可是我的领域服务中需要用到外部接口、中央缓存等等，那这不就有了外部依赖了吗？<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">├─com.company.microservice</span><br><span class="line">├─com.company.microservice</span><br><span class="line">│    │ </span><br><span class="line">│    ├─apis   API接口层 </span><br><span class="line">│    │    └─controller       控制器，对外提供（Restful）接口</span><br><span class="line">│    │ </span><br><span class="line">│    ├─application           应用层</span><br><span class="line">│    │    ├─model            数据传输对象模型及其装配器（含校验）</span><br><span class="line">│    │    │    ├─assembler   装配器,，实现模型转换eg. apiModel&lt;=&gt; domainModel</span><br><span class="line">│    │    │    └─dto         模型定义（含校验规则）      </span><br><span class="line">│    │    ├─service          应用服务，非核心服务，跨领域的协作、复杂分页查询等</span><br><span class="line">│    │    ├─task             任务定义，协调领域模型</span><br><span class="line">│    │    ├─listener         事件监听定义</span><br><span class="line">│    │    └─***              others</span><br><span class="line">│    │ </span><br><span class="line">│    ├─domain   领域层</span><br><span class="line">│    │    ├─common           模块<span class="number">0</span>-公共代码抽取，限于领域层有效  </span><br><span class="line">│    │    ├─<span class="keyword">module</span>-xxx       模块<span class="number">1</span>-xxx，领域划分的模块，可理解为子域划分     </span><br><span class="line">│    │    ├─<span class="keyword">module</span>-user      模块<span class="number">2</span>-用户子域（领域划分的模块，可理解为子域划分）</span><br><span class="line">│    │    │    ├─action      行为定义</span><br><span class="line">│    │    │    │    ├─UserDomainService.java        领域服务,用户领域服务</span><br><span class="line">│    │    │    │    ├─UserPermissionChecker.java    其他行为，用户权限检查器</span><br><span class="line">│    │    │    │    ├─WhenUserCreatedEventPublisher.java     领域事件，当用户创建完成时的事件 </span><br><span class="line">│    │    │    ├─model       领域聚合内模型 </span><br><span class="line">│    │    │    │    ├─UserEntity.java                领域实体，有唯一标识的充血模型，如本身的CRUD操作在此处</span><br><span class="line">│    │    │    │    ├─UserDictVObj.java              领域值对象，用户字典kv定义       </span><br><span class="line">│    │    │    |    ├─UserDPO.java                   领域负载对象    </span><br><span class="line">│    │    │    ├─repostiory  领域仓储接口</span><br><span class="line">│    │    │    │    ├─UserRepository.java</span><br><span class="line">│    │    │    ├─reference   领域适配接口</span><br><span class="line">│    │    │    │    ├─UserEmailSenderFacade.java</span><br><span class="line">│    │    │    └─factory     领域工厂  </span><br><span class="line">│    │ </span><br><span class="line">│    ├─infrastructure  基础设施层</span><br><span class="line">│    │    ├─persistence      持久化机制</span><br><span class="line">│    │    │    ├─converter   持久化模型转换器</span><br><span class="line">│    │    │    ├─po          持久化对象定义 </span><br><span class="line">│    │    │    └─repository.impl  仓储类，持久化接口&amp;实现，可与ORM映射框架结合</span><br><span class="line">│    │    ├─general          通用技术支持，向其他层输出通用服务</span><br><span class="line">│    │    │    ├─config      配置类</span><br><span class="line">│    │    │    ├─toolkit     工具类  </span><br><span class="line">│    │    │    ├─extension   扩展定义  </span><br><span class="line">│    │    │    └─common      基础公共模块等 </span><br><span class="line">│    │    ├─reference        引用层，包装外部接口用，防止穿插到Domain层腐化领域模型等</span><br><span class="line">│    │    │    ├─dto         传输模型定义</span><br><span class="line">│    │    │    ├─converter   传输模型转换器       </span><br><span class="line">│    │    │    └─facade.impl 适配器具体实现，此处的RPC、Http等调用</span><br><span class="line">│    │ </span><br><span class="line">│    └─resources  </span><br><span class="line">│        ├─statics  静态资源</span><br><span class="line">│        ├─template 系统页面 </span><br><span class="line">│        └─application.yml   全局配置文件</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<a target="_blank" rel="noopener" href="https://blog.csdn.net/whos2016/article/details/103927879">https://blog.csdn.net/whos2016/article/details/103927879</a></li>
+</ul>
+<p>这些目录的职能和代码形态是这样的。</p>
+<ul>
+<li><strong>Interfaces（用户接口层）：</strong> 它主要存放用户接口层与前端交互、展现数据相关的代码。前端应用通过这一层的接口，向应用服务获取展现所需的数据。这一层主要用来处理用户发送的 Restful 请求，解析用户输入的配置文件，并将数据传递给 Application 层。数据的组装、数据传输格式以及 Facade 接口等代码都会放在这一层目录里。</li>
+<li><strong>Application（应用层）：</strong> 它主要存放应用层服务组合和编排相关的代码。应用服务向下基于微服务内的领域服务或外部微服务的应用服务完成服务的编排和组合，向上为用户接口层提供各种应用数据展现支持服务。应用服务和事件等代码会放在这一层目录里。</li>
+<li><strong>Domain（领域层）：</strong> 它主要存放领域层核心业务逻辑相关的代码。领域层可以包含多个聚合代码包，它们共同实现领域模型的核心业务逻辑。聚合以及聚合内的实体、方法、领域服务和事件等代码会放在这一层目录里。</li>
+<li><strong>Infrastructure（基础层）：</strong> 它主要存放基础资源服务相关的代码为其它各层提供的通用技术能力、三方软件包、数据库服务、配置和基础资源服务的代码都会放在这一层目录里。</li>
+</ul>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3><h3 id="各层目录结构"><a href="#各层目录结构" class="headerlink" title="各层目录结构"></a>各层目录结构</h3><h4 id="1-用户接口层"><a href="#1-用户接口层" class="headerlink" title="#1. 用户接口层"></a><a target="_blank" rel="noopener" href="https://zq99299.github.io/note-book2/ddd/03/03.html#_1-%E7%94%A8%E6%88%B7%E6%8E%A5%E5%8F%A3%E5%B1%82">#</a>1. <strong>用户接口层</strong></h4><p>Interfaces 的代码目录结构有：assembler、dto 和 façade 三类<br><img src="https://cdn.nlark.com/yuque/0/2023/png/33777315/1690202845026-cd91f57f-533c-4c9b-a14c-6bedda696b01.png#averageHue=%23fdfcfa&clientId=u523b8cd5-713f-4&from=paste&id=u845aac1f&originHeight=262&originWidth=958&originalType=url&ratio=1.25&rotation=0&showTitle=false&size=83736&status=done&style=none&taskId=u5298634f-8e93-40ee-ade6-17ca4374604&title=" class="lazyload" data-srcset="https://cdn.nlark.com/yuque/0/2023/png/33777315/1690202845026-cd91f57f-533c-4c9b-a14c-6bedda696b01.png#averageHue=%23fdfcfa&clientId=u523b8cd5-713f-4&from=paste&id=u845aac1f&originHeight=262&originWidth=958&originalType=url&ratio=1.25&rotation=0&showTitle=false&size=83736&status=done&style=none&taskId=u5298634f-8e93-40ee-ade6-17ca4374604&title=" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image.png"></p>
+<ul>
+<li><strong>Assembler：</strong> 实现 DTO 与领域对象之间的相互转换和数据交换。一般来说 Assembler 与 DTO 总是一同出现。</li>
+<li><strong>Dto：</strong> 它是数据传输的载体，内部不存在任何业务逻辑，我们可以通过 DTO 把内部的领域对象与外界隔离。</li>
+<li><strong>Facade：</strong> 提供较粗粒度的调用接口，将用户请求委派给一个或多个应用服务进行处理。</li>
+</ul>
+<h4 id="2-应用层"><a href="#2-应用层" class="headerlink" title="#2. 应用层"></a><a target="_blank" rel="noopener" href="https://zq99299.github.io/note-book2/ddd/03/03.html#_2-%E5%BA%94%E7%94%A8%E5%B1%82">#</a>2. <strong>应用层</strong></h4><p>Application 的代码目录结构有：event 和 service<br><img src="https://cdn.nlark.com/yuque/0/2023/png/33777315/1690202844804-666cdd2d-89af-4e8f-a100-8be578b6dddf.png#averageHue=%23fdfcfb&clientId=u523b8cd5-713f-4&from=paste&id=ue09efbea&originHeight=328&originWidth=1060&originalType=url&ratio=1.25&rotation=0&showTitle=false&size=115152&status=done&style=none&taskId=u6e8cdafb-bd59-461d-a064-58538d4aafc&title=" class="lazyload" data-srcset="https://cdn.nlark.com/yuque/0/2023/png/33777315/1690202844804-666cdd2d-89af-4e8f-a100-8be578b6dddf.png#averageHue=%23fdfcfb&clientId=u523b8cd5-713f-4&from=paste&id=ue09efbea&originHeight=328&originWidth=1060&originalType=url&ratio=1.25&rotation=0&showTitle=false&size=115152&status=done&style=none&taskId=u6e8cdafb-bd59-461d-a064-58538d4aafc&title=" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image.png"></p>
+<ul>
+<li><strong>Event（事件）：</strong>这层目录主要存放事件相关的代码。它包括两个子目录：publish 和 subscribe。前者主要存放事件发布相关代码，后者主要存放事件订阅相关代码（事件处理相关的核心业务逻辑在领域层实现）。这里提示一下：虽然应用层和领域层都可以进行事件的发布和处理，但为了实现事件的统一管理，我建议你将微服务内所有事件的发布和订阅的处理都统一放到应用层，事件相关的核心业务逻辑实现放在领域层。通过应用层调用领域层服务，来实现完整的事件发布和订阅处理流程。</li>
+<li><strong>Service（应用服务）：</strong>这层的服务是应用服务。<strong>应用服务会对多个领域服务或外部应用服务进行封装、编排和组合，对外提供粗粒度的服务</strong>。应用服务主要实现服务组合和编排，是一段独立的业务逻辑。你可以将所有应用服务放在一个应用服务类里，也可以把一个应用服务设计为一个应用服务类，以防应用服务类代码量过大。</li>
+</ul>
+<h4 id="3-领域层"><a href="#3-领域层" class="headerlink" title="#3. 领域层"></a><a target="_blank" rel="noopener" href="https://zq99299.github.io/note-book2/ddd/03/03.html#_3-%E9%A2%86%E5%9F%9F%E5%B1%82">#</a><strong>3. 领域层</strong></h4><p>Domain 是由一个或多个聚合包构成，共同实现领域模型的核心业务逻辑。聚合内的代码模型是标准和统一的，包括：entity、event、repository 和 service 四个子目录。<br><img src="https://cdn.nlark.com/yuque/0/2023/png/33777315/1690202846911-d65e1442-79cf-424f-82a0-dc0e57621465.png#averageHue=%23fcfbfa&clientId=u523b8cd5-713f-4&from=paste&id=udaea2a06&originHeight=860&originWidth=1208&originalType=url&ratio=1.25&rotation=0&showTitle=false&size=379565&status=done&style=none&taskId=u2b08e513-8c6d-46ba-8a6a-3c238456064&title=" class="lazyload" data-srcset="https://cdn.nlark.com/yuque/0/2023/png/33777315/1690202846911-d65e1442-79cf-424f-82a0-dc0e57621465.png#averageHue=%23fcfbfa&clientId=u523b8cd5-713f-4&from=paste&id=udaea2a06&originHeight=860&originWidth=1208&originalType=url&ratio=1.25&rotation=0&showTitle=false&size=379565&status=done&style=none&taskId=u2b08e513-8c6d-46ba-8a6a-3c238456064&title=" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image.png"><br>而领域层聚合内部的代码目录结构是这样的。</p>
+<ul>
+<li><strong>Aggregate（聚合）：</strong> 它是聚合软件包的根目录，可以根据实际项目的聚合名称命名，比如权限聚合。在聚合内定义聚合根、实体和值对象以及领域服务之间的关系和边界。聚合内实现高内聚的业务逻辑，它的代码可以独立拆分为微服务。以聚合为单位的代码放在一个包里的主要目的是为了业务内聚，而更大的目的是为了以后微服务之间聚合的重组。聚合之间清晰的代码边界，可以让你轻松地实现以聚合为单位的微服务重组，在微服务架构演进中有着很重要的作用。</li>
+<li><strong>Entity（实体）：</strong> 它存放聚合根、实体、值对象以及工厂模式（Factory）相关代码。实体类采用 <strong>充血模型</strong>，<strong>同一实体相关的业务逻辑都在实体类代码中实现。跨实体的业务逻辑代码在领域服务中实现</strong>。</li>
+<li><strong>Event（事件）：</strong> 它存放事件实体以及与事件活动相关的业务逻辑代码。</li>
+<li><strong>Service（领域服务）：</strong> 它存放领域服务代码。<strong>一个领域服务是多个实体组合出来的一段业务逻辑</strong>。你可以将聚合内所有领域服务都放在一个领域服务类中，你也可以把每一个领域服务设计为一个类。如果领域服务内的业务逻辑相对复杂，我建议你将一个领域服务设计为一个领域服务类，避免由于所有领域服务代码都放在一个领域服务类中，而出现代码臃肿的问题。领域服务封装多个实体或方法后向上层提供应用服务调用。</li>
+<li><strong>Repository（仓储）：</strong> 它存放所在聚合的查询或持久化领域对象的代码，通常包括仓储接口和仓储实现方法。为了方便聚合的拆分和组合，我们设定了一个原则：一个聚合对应一个仓储。</li>
+</ul>
+<p>特别说明：按照 DDD 分层架构，仓储实现本应该属于基础层代码，但为了在微服务架构演进时，保证代码拆分和重组的便利性，我是把聚合仓储实现的代码放到了聚合包内。这样，如果需求或者设计发生变化导致聚合需要拆分或重组时，我们就可以将包括核心业务逻辑和仓储代码的聚合包整体迁移，轻松实现微服务架构演进。</p>
+<h4 id="4-基础层"><a href="#4-基础层" class="headerlink" title="#4. 基础层"></a><a target="_blank" rel="noopener" href="https://zq99299.github.io/note-book2/ddd/03/03.html#_4-%E5%9F%BA%E7%A1%80%E5%B1%82">#</a><strong>4. 基础层</strong></h4><p>Infrastructure 的代码目录结构有：config 和 util 两个子目录。<br><img src="https://cdn.nlark.com/yuque/0/2023/png/33777315/1690202845060-da206cbf-b32c-47b8-8d99-8169663fadce.png#averageHue=%23fdfdfb&clientId=u523b8cd5-713f-4&from=paste&id=u4d0e1d93&originHeight=440&originWidth=1142&originalType=url&ratio=1.25&rotation=0&showTitle=false&size=137209&status=done&style=none&taskId=ucdb214f1-8d5d-4b70-b8eb-ff0bdf5c006&title=" class="lazyload" data-srcset="https://cdn.nlark.com/yuque/0/2023/png/33777315/1690202845060-da206cbf-b32c-47b8-8d99-8169663fadce.png#averageHue=%23fdfdfb&clientId=u523b8cd5-713f-4&from=paste&id=u4d0e1d93&originHeight=440&originWidth=1142&originalType=url&ratio=1.25&rotation=0&showTitle=false&size=137209&status=done&style=none&taskId=ucdb214f1-8d5d-4b70-b8eb-ff0bdf5c006&title=" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image.png"></p>
+<ul>
+<li><strong>Config：</strong> 主要存放配置相关代码。</li>
+<li><strong>Util：</strong> 主要存放平台、开发框架、消息、数据库、缓存、文件、总线、网关、第三方类库、通用算法等基础代码，你可以为不同的资源类别建立不同的子目录。</li>
+</ul>
+<h1 id="实战"><a href="#实战" class="headerlink" title="实战***"></a>实战***</h1><p>ddd架构04年被提出，以业务为中心，传统mvc中的三层对于业务并没有很清楚的描述，在项目越来越大的情况下，就会出现代码的冗余，最终可能导致重构项目，ddd最开始按照业务生成领域，一切以领域为主，非常利于维护，如果说有什么不好的就是前期的构建非常的麻烦，mvc是一种贫血架构，ddd是一种充血架构</p>
+<h2 id="领域是什么？"><a href="#领域是什么？" class="headerlink" title="领域是什么？"></a>领域是什么？</h2><p>领域是一种边界，mvc中controller中的user可能用到orderservice以及其他的service，所有的service都可能被其他所有调用，这样就在service中破坏了领域的划分<br>ddd将领域分为三个<br>核心域：最重要的部分 代表核心业务的处理<br>通用域：通用的部分，例如：登陆 注册 角色<br>支撑域：例如监控系统 报表</p>
+<h2 id="DDD四层架构简介"><a href="#DDD四层架构简介" class="headerlink" title="DDD四层架构简介"></a>DDD四层架构简介</h2><p><img src="https://cdn.nlark.com/yuque/0/2023/png/33777315/1693377695938-0f74d420-d033-4d16-a0cc-c2da9e4fe25e.png#averageHue=%23afe465&clientId=ud2f56625-6558-4&from=paste&height=492&id=ua9c7404a&originHeight=615&originWidth=1410&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=372940&status=done&style=none&taskId=u05deab0e-159a-4bea-8afe-3ad4bb080ce&title=&width=1128" class="lazyload" data-srcset="https://cdn.nlark.com/yuque/0/2023/png/33777315/1693377695938-0f74d420-d033-4d16-a0cc-c2da9e4fe25e.png#averageHue=%23afe465&clientId=ud2f56625-6558-4&from=paste&height=492&id=ua9c7404a&originHeight=615&originWidth=1410&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=372940&status=done&style=none&taskId=u05deab0e-159a-4bea-8afe-3ad4bb080ce&title=&width=1128" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image.png"><img src="https://cdn.nlark.com/yuque/0/2023/png/33777315/1690188982964-062d56f3-6b45-406b-a1c4-5e52e193caa1.png#averageHue=%23e1d1c4&clientId=u18f4f760-94b9-4&from=paste&id=eQUTM&originHeight=872&originWidth=964&originalType=url&ratio=1.25&rotation=0&showTitle=false&status=done&style=none&taskId=u2620850f-905b-4a08-b5c9-1244042973a&title=" class="lazyload" data-srcset="https://cdn.nlark.com/yuque/0/2023/png/33777315/1690188982964-062d56f3-6b45-406b-a1c4-5e52e193caa1.png#averageHue=%23e1d1c4&clientId=u18f4f760-94b9-4&from=paste&id=eQUTM&originHeight=872&originWidth=964&originalType=url&ratio=1.25&rotation=0&showTitle=false&status=done&style=none&taskId=u2620850f-905b-4a08-b5c9-1244042973a&title=" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>由上到下分为<br>用户接口层：各种各样的接口（例如说手机 ipad 电脑都有支付的功能 他们都依赖于应用层 需要去调用应用层的实现 应用层有支付的功能 而这里有各种面容支付 指纹支付 密码支付等等）<br>应用层：组成相应的业务场景 将领域层的业务能力组装成一个业务系统（依赖于领域层完成 具体的应用例如根据领域层的余额增加减少而生成的转账支付等等）<br>领域层：一个软件最核心的业务能力 领域层不需要依赖外部任何的组件就能完成自身的业务能力（最核心 例如支付系统 这里就有对余额的增加减少）<br>基础层：只是对领域层的数据的支撑 比如说持久化<br><strong>例如 账户的管理系统 需要有什么核心的能力？对账户的管理 每个人都有账户 账户的余额可增加可减少 如果不需要数据库是否可以实现 是可以的 但是为了数据的安全性因此引入数据库 所以本身领域层是不需要依赖其他所有可以完成对应的核心业务 而基础层是一种支撑 为了保护数据的安全才引入 而我们有了这样的业务的支撑才能实现一些场景 比如说充值 比如说转账 充值和转账都是依赖业务的场景 因为他们都是需要用户账户余额有增加减少的能力才形成了业务的这么一个场景 所以应用层和领域层是一种依赖关系 应用层依赖于领域层 而领域层和基础层是一种帮助。应用层和领域层之间 应用层会功能越来越多，例如转账充值支付等等增减余额的功能，而领域层变化则很慢，因为围绕领域层产生的应用是非常多 例如说领域层是余额管理 应用层根据这个余额管理就有各种支付方式（扫码，面容，指纹，密码） 用户接口层就有各种各样新机器的扫码方式（例如快递柜的扫脸，门禁等等机器）这些机器的功能依赖于应用层 应用层有依赖于领域层 基础层为领域层提供帮助 因此DDD四层架构是上层依赖于下层，用户接口层变化最大 应用层变化次之 领域变化最小 基础层是给以上三层提供帮助</strong></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2023/png/33777315/1693587021534-0178c037-7404-4562-a763-9e37863a98a9.png#averageHue=%23dedbd5&clientId=u868be2f7-0fe6-4&from=paste&height=191&id=u8dbe367b&originHeight=239&originWidth=810&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=196367&status=done&style=none&taskId=ub1877363-2f34-4109-96f1-b9f998de473&title=&width=648" class="lazyload" data-srcset="https://cdn.nlark.com/yuque/0/2023/png/33777315/1693587021534-0178c037-7404-4562-a763-9e37863a98a9.png#averageHue=%23dedbd5&clientId=u868be2f7-0fe6-4&from=paste&height=191&id=u8dbe367b&originHeight=239&originWidth=810&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=196367&status=done&style=none&taskId=ub1877363-2f34-4109-96f1-b9f998de473&title=&width=648" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image.png"></p>
+<h2 id="有助于解决系统老化问题"><a href="#有助于解决系统老化问题" class="headerlink" title="有助于解决系统老化问题"></a>有助于解决系统老化问题</h2><p>DDD解决项目从简单到复杂的变化 微服务确实可以解决系统老化问题 但是治标不治本 随着项目的累积 微服务中总会有一个服务变成累赘 这就又变得臃肿难以维护</p>
+<h2 id="开放平台"><a href="#开放平台" class="headerlink" title="开放平台"></a>开放平台</h2><h3 id="domain层的entity"><a href="#domain层的entity" class="headerlink" title="domain层的entity"></a>domain层的entity</h3><p>根据业务设置出实体（<strong>domain层的entity</strong>）<br>注意以下实体的属性 只是有可能引起实体状态变化的 比如说账户的钱<br><img src="https://cdn.nlark.com/yuque/0/2023/png/33777315/1693383326704-0ec0dec6-f2f2-44f8-9a26-9901eef36b41.png#averageHue=%23f4f3f3&clientId=ud2f56625-6558-4&from=paste&height=508&id=t71lo&originHeight=635&originWidth=968&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=301456&status=done&style=none&taskId=u94d2325c-c0dd-4b1f-a282-a88f5e37281&title=&width=774.4" class="lazyload" data-srcset="https://cdn.nlark.com/yuque/0/2023/png/33777315/1693383326704-0ec0dec6-f2f2-44f8-9a26-9901eef36b41.png#averageHue=%23f4f3f3&clientId=ud2f56625-6558-4&from=paste&height=508&id=t71lo&originHeight=635&originWidth=968&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=301456&status=done&style=none&taskId=u94d2325c-c0dd-4b1f-a282-a88f5e37281&title=&width=774.4" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image.png"><br>mvc就是典型的贫血模型 一个实体类承担了所有的业务<br>DDD充血模型将数据和行为绑定在一起 这样的好处就是一个提取出来的业务类，只专注于本身业务 贫血模型一个实体类承担所有的业务再加上service业务之间的互相调用 使得项目越来越难以梳理<br>实体包含很多的属性 这些属性包含在领域中 一定是用于处理一部分业务的 而不是将所有的属性都放在一个实体中 另外与实体状态无关的操作（这些操作不会引起实体变化 例如说需要将状态等等信息存入数据库）怎么办<br>这就需要仓库与工厂 这个仓储用来提供数据的操作 实体和数据库解耦<br>ddd是将这一层抽取出来单独成为仓储 用来为核心业务提供他所需要的数据库操作（比如说如果我的核心业务需要去数据库查询出一些基本信息 就需要去仓储中查询）</p>
+<h3 id="domain层的repository"><a href="#domain层的repository" class="headerlink" title="domain层的repository"></a>domain层的repository</h3><p><img src="https://cdn.nlark.com/yuque/0/2023/png/33777315/1693400001461-b9d8a2df-deaf-4db8-8a2c-e8fbe1c09ba9.png#averageHue=%23f2f2f1&clientId=ud2f56625-6558-4&from=paste&height=520&id=ud52e6bdf&originHeight=650&originWidth=860&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=384579&status=done&style=none&taskId=u82c8adc0-0812-4269-9613-efc3f35a1cd&title=&width=688" class="lazyload" data-srcset="https://cdn.nlark.com/yuque/0/2023/png/33777315/1693400001461-b9d8a2df-deaf-4db8-8a2c-e8fbe1c09ba9.png#averageHue=%23f2f2f1&clientId=ud2f56625-6558-4&from=paste&height=520&id=ud52e6bdf&originHeight=650&originWidth=860&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=384579&status=done&style=none&taskId=u82c8adc0-0812-4269-9613-efc3f35a1cd&title=&width=688" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image.png"><br>一种仓储 可以有多种的实现方式 比如说不同数据库 不同框架 只需要再次创建一个实现类即可业务只需要和这个仓库打交道 读取保存数据库操作只需要寻找这个仓储即可 这些操作不会影响实体状态</p>
+<h3 id="防腐层（domain的service）"><a href="#防腐层（domain的service）" class="headerlink" title="防腐层（domain的service）"></a>防腐层（domain的service）</h3><p><strong>一个领域服务是多个实体组合出来的一段业务逻辑</strong><br><img src="https://cdn.nlark.com/yuque/0/2023/png/33777315/1693405083264-93df8606-c7c6-4669-af6f-85e9028bab5f.png#averageHue=%23e2dbcb&clientId=ud2f56625-6558-4&from=paste&height=400&id=ubaa8bfa7&originHeight=500&originWidth=889&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=239695&status=done&style=none&taskId=u421ed6f4-ecb8-44c1-b959-ecb25c1062d&title=&width=711.2" class="lazyload" data-srcset="https://cdn.nlark.com/yuque/0/2023/png/33777315/1693405083264-93df8606-c7c6-4669-af6f-85e9028bab5f.png#averageHue=%23e2dbcb&clientId=ud2f56625-6558-4&from=paste&height=400&id=ubaa8bfa7&originHeight=500&originWidth=889&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=239695&status=done&style=none&taskId=u421ed6f4-ecb8-44c1-b959-ecb25c1062d&title=&width=711.2" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image.png"><br>将第三方的接口封装起来 只要有成功失败的结果即可 如果第三方的业务有变动 只需要更改这里 或者加入新的实现类来增加新接口<br>防腐层：有点类似什么呢 一层保鲜膜 第三方的应用坏了 也不会影响我本身业务<br><img src="https://cdn.nlark.com/yuque/0/2023/png/33777315/1693405294580-e1724351-3529-4287-a0ca-3ccbfe3e91e3.png#averageHue=%23f6f5f4&clientId=ud2f56625-6558-4&from=paste&height=475&id=ud7e0af06&originHeight=594&originWidth=894&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=308161&status=done&style=none&taskId=ud2e58399-ab3b-4901-a541-f883f812e18&title=&width=715.2" class="lazyload" data-srcset="https://cdn.nlark.com/yuque/0/2023/png/33777315/1693405294580-e1724351-3529-4287-a0ca-3ccbfe3e91e3.png#averageHue=%23f6f5f4&clientId=ud2f56625-6558-4&from=paste&height=475&id=ud7e0af06&originHeight=594&originWidth=894&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=308161&status=done&style=none&taskId=ud2e58399-ab3b-4901-a541-f883f812e18&title=&width=715.2" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2023/png/33777315/1693405372639-2011e89b-0336-4614-8867-182b737ca1a3.png#averageHue=%23f5f5f4&clientId=ud2f56625-6558-4&from=paste&height=290&id=uafb99169&originHeight=363&originWidth=932&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=206326&status=done&style=none&taskId=uacbbd628-7a65-40b8-b5cf-5db198c2c8c&title=&width=745.6" class="lazyload" data-srcset="https://cdn.nlark.com/yuque/0/2023/png/33777315/1693405372639-2011e89b-0336-4614-8867-182b737ca1a3.png#averageHue=%23f5f5f4&clientId=ud2f56625-6558-4&from=paste&height=290&id=uafb99169&originHeight=363&originWidth=932&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=206326&status=done&style=none&taskId=uacbbd628-7a65-40b8-b5cf-5db198c2c8c&title=&width=745.6" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image.png"><br><strong>领域服务：以上的转账service中 只调用实体的业务能力 去组成具体的业务场景</strong><br><strong>一个领域服务是多个实体组合出来的一段业务逻辑</strong></p>
+<h3 id="应用层（service）"><a href="#应用层（service）" class="headerlink" title="应用层（service）"></a>应用层（service）</h3><p>依赖于领域层  根据领域层提供的核心业务 根据实体的业务能力组成对应场景<br><strong>应用服务会对多个领域服务或外部应用服务进行封装、编排和组合，对外提供粗粒度的服务</strong>。<br>重新编排后的业务代码<br><img src="https://cdn.nlark.com/yuque/0/2023/png/33777315/1693405472098-6c36f49a-ae7a-48ff-a53d-51f8e793a41c.png#averageHue=%23e4e1d8&clientId=ud2f56625-6558-4&from=paste&height=598&id=ubc787fcd&originHeight=748&originWidth=946&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=523729&status=done&style=none&taskId=u46ae2a4a-3063-4391-805e-18acd1fad7d&title=&width=756.8" class="lazyload" data-srcset="https://cdn.nlark.com/yuque/0/2023/png/33777315/1693405472098-6c36f49a-ae7a-48ff-a53d-51f8e793a41c.png#averageHue=%23e4e1d8&clientId=ud2f56625-6558-4&from=paste&height=598&id=ubc787fcd&originHeight=748&originWidth=946&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=523729&status=done&style=none&taskId=u46ae2a4a-3063-4391-805e-18acd1fad7d&title=&width=756.8" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image.png"><br>每一步都有对应的实体 执行就找对应的实体要， 以上代码中 加载数据（数据库查询）也就找仓储 检查使用防腐层  转账使用领域服务 保存也是用仓储 每一步都有对应的组件来负责 pay方法中没有任何的业务实现 另外测试很容易 只需要对应各自的组件进行测试</p>
+<p><strong>application层用于接收请求并且调用领域方法返回</strong></p>
+<h3 id="用户接口层-interface"><a href="#用户接口层-interface" class="headerlink" title="用户接口层 interface"></a>用户接口层 interface</h3><p>用于与外界交互 处理用户传入的数据 并且将处理好的请求发送给应用层</p>
+<h2 id="限界上下文"><a href="#限界上下文" class="headerlink" title="限界上下文"></a>限界上下文</h2><p>领域中可能需要其他的领域功能 这就需要领域提供自身接口给其他领域 调用的只需要调用这个接口 知道结果就知道了 而不需要关注具体实现<br><img src="https://cdn.nlark.com/yuque/0/2023/png/33777315/1693577921725-3c734aae-b0c8-4841-87d9-a6a2e266d3da.png#averageHue=%234f4734&clientId=u868be2f7-0fe6-4&from=paste&height=527&id=u6c588fce&originHeight=659&originWidth=1551&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=366175&status=done&style=none&taskId=uf9ac7148-77bc-4676-b102-7fa18956b93&title=&width=1240.8" class="lazyload" data-srcset="https://cdn.nlark.com/yuque/0/2023/png/33777315/1693577921725-3c734aae-b0c8-4841-87d9-a6a2e266d3da.png#averageHue=%234f4734&clientId=u868be2f7-0fe6-4&from=paste&height=527&id=u6c588fce&originHeight=659&originWidth=1551&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=366175&status=done&style=none&taskId=uf9ac7148-77bc-4676-b102-7fa18956b93&title=&width=1240.8" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image.png"><br>在领域中有adapter层 用于暴露接口 其他任意领域需要调用该领域都需要调用提供的接口即可<br>另外这种限定上下文的接口 如果进行扩展 使用rpc 例如说dubbo 将这些向外的提供的dubbo在dubbo中定义 这里进行实现 消费者进行调用</p>
+
+  </div>
+  
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
       
-        <div>
-          <a class='readmore' href='/2023/07/31/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-09-03T15:16:26+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2023年9月3日</p>
+  </a>
 </div>
 
-          </div>
         
       
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
-  </section>
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/09/03/DDD%E6%9E%B6%E6%9E%84/&title=DDD - 天天&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/09/03/DDD%E6%9E%B6%E6%9E%84/&title=DDD - 天天&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/09/03/DDD%E6%9E%B6%E6%9E%84/&title=DDD - 天天&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
   
-    
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2023/07/31/react%E5%9F%BA%E7%A1%80%E8%90%BD%E5%9C%B0%E9%A1%B9%E7%9B%AE/'>
+          <p class='title'>react落地项目<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>项目前置准备
+项目介绍本节目标:  了解项目的定位和功能项目功能演示登录、退出首页内容（文章）管理：文章列表、发布文章、修改文章技术React 官方脚手架 create-react-apprea...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
   
 
 
+  <article class="post white-box shadow floatable blur" id="comments">
+    <span hidden>
+      <meta itemprop="discussionUrl" content="/2023/09/03/DDD%E6%9E%B6%E6%9E%84/index.html#comments">
+    </span>
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
-  
+
+    <div id="layoutHelper-comments"></div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -2425,135 +2610,48 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-<section class="widget blogger desktop mobile pjax">
-  <div class='content'>
     
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://static-cse.canva.cn/blob/27127/克莱因蓝配图-2.jpg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>Luhumu</h2>
-        
-        
-          <p>thanks</p>
-
-        
-        
-          <p><span id="jinrishici-sentence">天天</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/mengxiangzhuifeiji"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fa-solid fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget category desktop pjax">
-    
-  <header>
-    
-      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/%E4%B8%AD%E9%97%B4%E4%BB%B6/" href="/categories/%E4%B8%AD%E9%97%B4%E4%BB%B6/"
-            active-action="action-categoriesE4B8ADE997B4E4BBB6"
-            ><div class='name'>中间件</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%89%8D%E7%AB%AF/" href="/categories/%E5%89%8D%E7%AB%AF/"
-            active-action="action-categoriesE5898DE7ABAF"
-            ><div class='name'>前端</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%90%8E%E7%AB%AF/" href="/categories/%E5%90%8E%E7%AB%AF/"
-            active-action="action-categoriesE5908EE7ABAF"
-            ><div class='name'>后端</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%9E%B6%E6%9E%84%E6%A8%A1%E5%BC%8F/" href="/categories/%E6%9E%B6%E6%9E%84%E6%A8%A1%E5%BC%8F/"
-            active-action="action-categoriesE69EB6E69E84E6A8A1E5BC8F"
-            ><div class='name'>架构模式</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"
-            active-action="action-categoriesE8AEBEE8AEA1E6A8A1E5BC8F"
-            ><div class='name'>设计模式</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-
-    
-  
-
   
 
 
 <div class="widget-sticky pjax">
 
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-text"></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%84%E5%B1%82%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84"><span class="toc-text">各层目录结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E7%94%A8%E6%88%B7%E6%8E%A5%E5%8F%A3%E5%B1%82"><span class="toc-text">1. 用户接口层</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%BA%94%E7%94%A8%E5%B1%82"><span class="toc-text">2. 应用层</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E9%A2%86%E5%9F%9F%E5%B1%82"><span class="toc-text">3. 领域层</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E5%9F%BA%E7%A1%80%E5%B1%82"><span class="toc-text">4. 基础层</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%86%E5%9F%9F%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">领域是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DDD%E5%9B%9B%E5%B1%82%E6%9E%B6%E6%9E%84%E7%AE%80%E4%BB%8B"><span class="toc-text">DDD四层架构简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%89%E5%8A%A9%E4%BA%8E%E8%A7%A3%E5%86%B3%E7%B3%BB%E7%BB%9F%E8%80%81%E5%8C%96%E9%97%AE%E9%A2%98"><span class="toc-text">有助于解决系统老化问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E6%94%BE%E5%B9%B3%E5%8F%B0"><span class="toc-text">开放平台</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#domain%E5%B1%82%E7%9A%84entity"><span class="toc-text">domain层的entity</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#domain%E5%B1%82%E7%9A%84repository"><span class="toc-text">domain层的repository</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%B2%E8%85%90%E5%B1%82%EF%BC%88domain%E7%9A%84service%EF%BC%89"><span class="toc-text">防腐层（domain的service）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E5%B1%82%EF%BC%88service%EF%BC%89"><span class="toc-text">应用层（service）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E6%8E%A5%E5%8F%A3%E5%B1%82-interface"><span class="toc-text">用户接口层 interface</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%99%90%E7%95%8C%E4%B8%8A%E4%B8%8B%E6%96%87"><span class="toc-text">限界上下文</span></a>
+    </div>
+  </section>
+
+  
+
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -2581,13 +2679,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3195,7 +3294,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"天天","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Luhumu","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"天天"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/设计模式/","name":"设计模式"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"天天","url":"http://example.com/","keywords":null,"description":"blog","author":{"@type":"Person","name":"Luhumu","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"blog"},"publisher":{"@type":"Organization","name":"天天","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"blog","inLanguage":["zh-CN","en","zh-TW","default"],"mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"Luhumu","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"天天","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"天天","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Luhumu","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"天天"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/架构模式/","name":"架构模式"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/09/03/DDD架构/","name":"DDD"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"天天","url":"http://example.com/","keywords":null,"description":"blog","author":{"@type":"Person","name":"Luhumu","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"blog"},"publisher":{"@type":"Organization","name":"天天","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"DDD","description":"blog","inLanguage":["zh-CN","en","zh-TW","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/09/03/DDD%E6%9E%B6%E6%9E%84/"},"author":{"@type":"Person","name":"Luhumu","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"天天","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/09/03/DDD%E6%9E%B6%E6%9E%84/","wordCount":0,"datePublished":"2023-09-03T07:15:47.134Z","dateModified":"2023-09-03T07:16:26.731Z","articleSection":"架构模式","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
